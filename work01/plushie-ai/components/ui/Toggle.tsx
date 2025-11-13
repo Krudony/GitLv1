@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 
-interface ToggleProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface ToggleProps extends Omit<React.HTMLAttributes<HTMLButtonElement>, 'onChange'> {
   checked?: boolean;
   onChange?: (checked: boolean) => void;
   disabled?: boolean;

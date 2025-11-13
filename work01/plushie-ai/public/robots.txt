@@ -1,0 +1,32 @@
+# Allow all robots to crawl this site
+User-agent: *
+Allow: /
+
+# Disallow admin and private pages
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.next/
+
+# Disallow auth pages from being indexed
+Disallow: /auth/login
+Disallow: /auth/signup
+Disallow: /auth/forgot-password
+Disallow: /auth/reset-password
+
+# Disallow user dashboard from being indexed
+Disallow: /dashboard/
+
+# Sitemap location
+Sitemap: https://plushieai.com/sitemap.xml
+
+# Crawl delay for respect
+Crawl-delay: 1
+
+# Allow specific bots to have faster access
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
